@@ -20,7 +20,7 @@ require(gridExtra)
 ### Data Processing
 First, we download the data file and unzip it.
 ```{r}
-setwd("~/Desktop/Online Coursera/Coursera-Reproducible-Research/RepData_PeerAssessment2/")
+setwd("~/Desktop/RepData_PeerAssessment2/")
 
 if (!"stormData.csv.bz2" %in% dir("./data/")) {
     print("hhhh")

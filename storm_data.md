@@ -1,13 +1,22 @@
+---
+title: "storm_data"
+output: html_document
+---
 Reproducible Research: Peer Assessment 2
-==========================================
+
 
 
 ## Impact of Severe Weather Events on Public Health and Economy in the United States
 
-### Synonpsis  
-In this report, we aim to analyze the impact of different weather events on public health and economy based on the storm database collected from the U.S. National Oceanic and Atmospheric Administration's (NOAA) from 1950 - 2011. We will use the estimates of fatalities, injuries, property and crop damage to decide which types of event are most harmful to the population health and economy. From these data, we found that excessive heat and tornado are most harmful with respect to population health, while flood, drought, and hurricane/typhoon have the greatest economic consequences.
+## Synonpsis  
+This project involves exploring the U.S. National Oceanic and Atmospheric Administration's (NOAA) storm database. This database tracks characteristics of major storms and weather events in the United States, including when and where they occur, as well as estimates of any fatalities, injuries, and property damage.
 
-### Basic settings
+The basic goal of this assignment is to explore the NOAA Storm Database and answer some basic questions about severe weather events: 
+1. Across the United States, which types of events (as indicated in the EVTYPE variable) are most harmful with respect to population health? 
+
+2. Across the United States, which types of events have the greatest economic consequences?
+
+##  settings
 
 ```r
 echo = TRUE  # Always make code visible
@@ -18,11 +27,10 @@ library(plyr)
 require(gridExtra)
 ```
 
-### Data Processing
-First, we download the data file and unzip it.
+##  Processing the Data
 
 ```r
-setwd("~/Desktop/Online Coursera/Coursera-Reproducible-Research/RepData_PeerAssessment2/")
+setwd("~/Desktop/RepData_PeerAssessment2/")
 
 if (!"stormData.csv.bz2" %in% dir("./data/")) {
     print("hhhh")
@@ -167,7 +175,7 @@ property <- sortHelper("propertyDamage", dataset = storm)
 crop <- sortHelper("cropDamage", dataset = storm)
 ```
 
-### Results
+## Results
 As for the impact on public health, we have got two sorted lists of severe weather events below by the number of people badly affected.
 
 ```r
@@ -300,5 +308,5 @@ grid.arrange(propertyPlot, cropPlot, ncol = 2)
 
 Based on the above histograms, we find that **flood** and **hurricane/typhoon** cause most property damage; **drought** and **flood** causes most crop damage in the United States from 1995 to 2011.
 
-### Conclusion  
-From these data, we found that **excessive heat** and **tornado** are most harmful with respect to population health, while **flood**, **drought**, and **hurricane/typhoon** have the greatest economic consequences.
+### the Conclusion  
+From these data aboove, **excessive heat** and **tornado** are found to be most harmful with respect to population health, while **flood**, **drought**, and **hurricane/typhoon** have the greatest economic consequences.
