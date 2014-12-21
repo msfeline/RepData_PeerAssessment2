@@ -73,7 +73,7 @@ For this assignment you will need to publish your analysis on [RPubs.com](http:/
 
 Once your document is published to RPubs, you should get a unique URL to that document. <b>Make a note of this URL</b> as you will need it to submit your assignment.
 
-<b>NOTE</b>: If you are having trouble connecting with RPubs due to proxy-related or other issues, you can upload your final analysis document file as a PDF to Coursera instead.
+<b>**NOTE**</b>: If you are having trouble connecting with RPubs due to proxy-related or other issues, you can upload your final analysis document file as a PDF to Coursera instead.
 
 #### Submitting Your Assignment
 
